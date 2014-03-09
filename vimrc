@@ -16,5 +16,6 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
 nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <Backspace> :b #<CR>
 inoremap jj <Esc>
 inoremap # X#
