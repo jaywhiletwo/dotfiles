@@ -1,0 +1,7 @@
+ctrlp.vim
+minibufexpl.vim
+nerdtree
+supertab
+syntastic
+vim-easymotion
+vim-fugitive
