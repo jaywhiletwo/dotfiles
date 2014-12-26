@@ -5,7 +5,6 @@ syntax on
 filetype indent plugin on
 set foldmethod=indent
 set foldlevel=99
-set smartindent
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -14,15 +13,22 @@ set backspace=indent,eol,start
 set ruler
 set number
 set wildignore+=*.pyc
-highlight LineNr ctermbg=black ctermfg=blue
+set nowrapscan
+set clipboard=unnamedplus
 
 inoremap jj <Esc>
 nnoremap <F5> :buffers<CR>:buffer<Space>
 nnoremap <F4> :NERDTreeToggle<CR>
 nnoremap <Backspace> :b<Space>#<CR>
 nnoremap <Space> za
+nnoremap <C-L> zz
+nnoremap n nzz
+nnoremap N Nzz
 
 let g:syntastic_enable_signs=1
+let g:netrw_liststyle=3
+let delimitMate_matchpairs = "(:),[:],{:}"
+let JSHintUpdateWriteOnly=1
 
 python << EOF
 import os
@@ -32,3 +38,13 @@ for p in sys.path:
     if os.path.isdir(p):
         vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
 EOF
+
+set t_Co=256
+set background=dark
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_start_level = 1
+let g:indent_guides_guide_size = 1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
+autocmd VimResized * :wincmd =
