@@ -1,7 +1,6 @@
 https://github.com/epmatsw/ag.vim
 https://github.com/kien/ctrlp.vim
 https://github.com/Raimondi/delimitMate
-https://github.com/andviro/flake8-vim
 https://github.com/vim-scripts/gitignore
 https://github.com/wookiehangover/jshint.vim.git
 https://github.com/danro/rename.vim
@@ -9,6 +8,7 @@ git://github.com/ajh17/Spacegray.vim.git
 https://github.com/ervandew/supertab
 https://github.com/godlygeek/tabular
 https://github.com/tpope/vim-dispatch
+https://github.com/nvie/vim-flake8
 http://github.com/tpope/vim-fugitive
 https://github.com/nathanaelkane/vim-indent-guides
 https://github.com/tpope/vim-vinegar

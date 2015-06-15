@@ -15,7 +15,6 @@ set ruler
 set number
 set wildignore+=*.pyc
 set nowrapscan
-set clipboard=unnamedplus
 
 inoremap jj <Esc>
 nnoremap <F5> :buffers<CR>:buffer<Space>
@@ -46,7 +45,17 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_start_level = 1
 let g:indent_guides_guide_size = 1
+
+" Plugin options
 let g:ctrlp_show_hidden = 1
+
+" Run vim-flake8 after every save
+autocmd BufWritePost *.py call Flake8()
+
+
+" Highlight indents
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
+
+" Resize windows when terminal is resized
 autocmd VimResized * :wincmd =
